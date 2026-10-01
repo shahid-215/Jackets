@@ -98,7 +98,7 @@ button {
 
 .nav-links a,
 .signin {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -116,8 +116,8 @@ button {
 }
 
 .theme-button {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border: 0;
   background: #fff;
   color: #111;
@@ -125,7 +125,7 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 16px;
   transition:
     transform 0.3s ease,
     background-color 0.4s ease,
@@ -168,7 +168,7 @@ button {
 
 .hero-copy p {
   margin: 0;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.15;
   letter-spacing: -0.5px;
 }
@@ -176,24 +176,16 @@ button {
 .hero-image {
   width: 125px;
   height: 125px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(73, 240, 174, 0.85),
-      rgba(151, 255, 221, 0.45)
-    );
   position: relative;
   overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #38e8a7 0%,
+    #28c98f 45%,
+    #0f6f50 100%
+  );
 }
 
-.hero-image::after {
-  content: "";
-  position: absolute;
-  inset: 22% 28%;
-  border-radius: 8px;
-  background: rgba(20, 35, 30, 0.8);
-  filter: blur(1px);
-}
 
 .hero-arrow,
 .green-arrow {
@@ -219,12 +211,21 @@ button {
   transform: translate(2px, -2px);
 }
 
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
 /* =========================
    ARRIVALS
 ========================= */
 
 .arrivals-wrap {
-  width: min(1120px, 91vw);
+  width: min(1020px, 71vw);
   margin: 0 auto;
   height: 76px;
   display: flex;
@@ -233,7 +234,7 @@ button {
 }
 
 .arrivals-track {
-  height: 43px;
+  height: 100px;
   flex: 1;
   background: #fff;
   overflow: hidden;
@@ -275,13 +276,13 @@ button {
 ========================= */
 
 .products-section {
-  width: min(1120px, 91vw);
-  margin: 18px auto 0;
+  width: min(1090px, 91vw);
+  margin: 70px auto 0;
 }
 
 .section-heading h2 {
-  margin: 0 0 15px;
-  font-size: 11px;
+  margin: 0 0 25px;
+  font-size: 25px;
   font-weight: 500;
 }
 
@@ -295,6 +296,8 @@ button {
   min-width: 0;
   position: relative;
   background: transparent;
+  margin-left: 40px;
+  margin-right: 0px;
 }
 
 .product-image {
@@ -326,6 +329,13 @@ button {
   opacity: 0.5;
 }
 
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .product-info {
   min-height: 51px;
   padding: 7px 7px 5px 0;
@@ -337,19 +347,19 @@ button {
 
 .product-label {
   display: block;
-  font-size: 7px;
+  font-size: 15px;
   margin-bottom: 2px;
   color: #888;
 }
 
 .product-info h3 {
   margin: 0;
-  font-size: 9px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .product-price {
-  font-size: 9px;
+  font-size: 22px;
   white-space: nowrap;
   color: #555;
 }
@@ -359,7 +369,7 @@ button {
   right: 0;
   bottom: 0;
   width: 38px;
-  height: 38px;
+  height: 28px;
   border: 0;
   background: #38e8a7;
   display: flex;
@@ -405,7 +415,7 @@ button {
 }
 
 .about-content p {
-  font-size: 13px;
+  font-size: 27px;
   line-height: 1.45;
   margin: 0 0 2px;
   letter-spacing: -0.15px;
@@ -415,7 +425,7 @@ button {
 .statement-link {
   display: inline-block;
   margin-top: 27px;
-  font-size: 9px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -445,10 +455,16 @@ button {
   margin: 0;
   text-align: center;
   color: rgba(20, 20, 20, 0.08);
-  font-size: clamp(42px, 6vw, 92px);
+  font-size: 88px;
   line-height: 0.96;
   letter-spacing: -5px;
   font-weight: 600;
+  transition: color 0.35s ease;
+  cursor: default;
+}
+
+.statement-section h2:hover {
+  color: #000;
 }
 
 .statement-link {
@@ -462,9 +478,10 @@ button {
 
 .footer {
   width: 100%;
-  padding: 50px 4.5vw 25px;
+  padding: 100px 4.5vw 25px;
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   background: #fff;
+  height: 400px;
 }
 
 .footer-top {
@@ -486,7 +503,7 @@ button {
 }
 
 .footer-logo-row strong {
-  font-size: 10px;
+  font-size: 22px;
   font-weight: 500;
 }
 
@@ -521,12 +538,12 @@ button {
 
 .footer-column h4 {
   margin: 0 0 7px;
-  font-size: 9px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .footer-column a {
-  font-size: 8px;
+  font-size: 17px;
   line-height: 1.35;
   color: #555;
 }
@@ -536,7 +553,7 @@ button {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  font-size: 7px;
+  font-size: 16px;
   color: #777;
 }
 
@@ -778,4 +795,21 @@ html.dark .footer-bottom {
     top: 35px;
     right: 8%;
   }
+}
+
+html.dark .statement-section h2:hover {
+  color: #fff;
+}
+
+
+
+.social-text {
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 600;
+  text-transform: lowercase;
 }

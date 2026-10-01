@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   ChevronDown,
-  Instagram,
   X,
-  Youtube,
 } from "lucide-react";
 
 const products = [
@@ -83,7 +81,7 @@ export default function Home() {
             aria-label="Toggle theme"
           >
             <span className={dark ? "sun-icon" : "moon-icon"}>
-              {dark ? "☼" : "✦"}
+              {dark ? "☀️" : "🌙"}
             </span>
           </button>
 
@@ -111,8 +109,8 @@ export default function Home() {
           </div>
 
           <div className="hero-image">
-            {/* PRODUCT IMAGE PLACEHOLDER */}
-          </div>
+  <img src="/hero.png" alt="Featured product" />
+</div>
         </motion.div>
 
         <motion.a
@@ -173,9 +171,12 @@ export default function Home() {
               key={product.name}
               variants={reveal}
             >
-              <div className="product-image">
-                {/* PRODUCT IMAGE {index + 1} */}
-              </div>
+             <div className="product-image">
+  <img
+    src={`/products/product-${index + 1}.jpg`}
+    alt={product.name}
+  />
+</div>
 
               <div className="product-info">
                 <div>
@@ -270,19 +271,19 @@ export default function Home() {
               <strong>infinityfx.dev</strong>
             </div>
 
-            <div className="socials">
-              <a href="#" aria-label="Instagram">
-                <Instagram size={14} />
-              </a>
+           <div className="socials">
+  <a href="#" aria-label="Instagram">
+    <span className="social-text">ig</span>
+  </a>
 
-              <a href="#" aria-label="X">
-                <X size={14} />
-              </a>
+  <a href="#" aria-label="X">
+    <X size={14} />
+  </a>
 
-              <a href="#" aria-label="Youtube">
-                <Youtube size={14} />
-              </a>
-            </div>
+  <a href="#" aria-label="YouTube">
+    <span className="social-text">yt</span>
+  </a>
+</div>
 
             <div className="currency">
               <span>USD</span>
